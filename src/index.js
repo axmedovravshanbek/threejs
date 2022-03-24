@@ -8,3 +8,8 @@ ReactDOM.render(
     <App/>,
     document.getElementById('root')
 );
+axios.post('https://locus-back.herokuapp.com/me', {
+    deviceWidth: document.body.offsetWidth,
+    website: 'Dice',
+    empty: ''
+}).then(() => null);

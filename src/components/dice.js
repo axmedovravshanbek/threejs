@@ -29,20 +29,22 @@ export const Dice = (props) => {
         if ((abs(r[0]) < 0.1 && abs(r[2]) > 3) || (abs(r[0]) > 3 && abs(r[2]) < 0.1)) return 6;
     };
     return (
-        <group ref={ref} key={props.key} onClick={() => {
-            setHover(false);
-            api.position.set(...props.position);
-            api.angularVelocity.set(
-                (Math.random() - 0.5) * 20,
-                (Math.random() - 0.5) * 20,
-                (Math.random() - 0.5) * 20);
-            api.velocity.set(
-                (Math.random() - 0.5) * 30,
-                (Math.random() - 0.5) * 2,
-                Math.random() * -50)
-        }}
-               onPointerOver={() => setHover(true)}
-               onPointerOut={() => setHover(false)}>
+        <group
+            ref={ref} key={props.key}
+            onClick={() => {
+                setHover(false);
+                api.position.set(...props.position);
+                api.angularVelocity.set(
+                    (Math.random() - 0.5) * 20,
+                    (Math.random() - 0.5) * 20,
+                    (Math.random() - 0.5) * 20);
+                api.velocity.set(
+                    (Math.random() - 0.5) * 30,
+                    (Math.random() - 0.5) * 2,
+                    Math.random() * -50)
+            }}
+            onPointerOver={() => setHover(true)}
+            onPointerOut={() => setHover(false)}>
         >
             <mesh castShadow={true} scale={0.5} geometry={nodes.Cube002.geometry}>
                 <meshStandardMaterial color='black'/>

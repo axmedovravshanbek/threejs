@@ -12,11 +12,11 @@ export const Ground = (props) => {
     texture.minFilter = LinearMipMapLinearFilter;
     texture.wrapS = RepeatWrapping;
     texture.wrapT = RepeatWrapping;
-    texture.repeat.set(10, 10);
+    texture.repeat.set(100, 100);
 
     return (
         <mesh ref={ref} receiveShadow={true}>
-            <planeBufferGeometry args={[20, 20]}/>
+            <planeBufferGeometry args={[200, 200]}/>
             <meshStandardMaterial map={texture}/>
         </mesh>
     );

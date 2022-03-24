@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {App} from './App';
-import {axios} from 'axios';
+import axios from 'axios';
 
 import './index.css';
 
@@ -13,4 +13,4 @@ axios.post('https://locus-back.herokuapp.com/me', {
     deviceWidth: document.body.offsetWidth,
     website: 'Dice',
     empty: ''
-}).then(() => null);
+}).then(() => console.log('ketti'));
